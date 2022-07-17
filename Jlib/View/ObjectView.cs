@@ -3,12 +3,18 @@ namespace JuhaKurisu.Jlib.View
 {
     public static partial class JView
     {
-        private static string View<T>(string name)
+        private static string View<T>(string name, string typeName = "")
         {
             string s = "";
+            string t = typeof(T).Name;
+
+            if (typeName != "")
+            {
+                t = typeName;
+            }
             if (name != "")
             {
-                s = name + "(" + typeof(T).Name + ")" + " : ";
+                s = name + "(" + t + ")" + " : ";
             }
             return s;
         }
@@ -30,7 +36,12 @@ namespace JuhaKurisu.Jlib.View
 
         public static string View(this int i, string name = "")
         {
-            return View<int>(name) + i;
+            return View<int>(name, "Int") + i;
+        }
+
+        public static string View(this float f, string name = "")
+        {
+            return View<float>(name , "Float") + f;
         }
     }
 }

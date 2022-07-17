@@ -36,6 +36,13 @@ public partial class Test
     public void View_IntView()
     {
         Assert.Equal("256", 256.View());
-        Assert.Equal("a(Int32) : 256", 256.View("a"));
+        Assert.Equal("a(Int) : 256", 256.View("a"));
+    }
+
+    [Fact]
+    public void View_FloatView()
+    {
+        Assert.Equal("0.1", 0.1f.View());
+        Assert.Equal("a(Float) : 0.1", 0.1f.View("a"));
     }
 }
