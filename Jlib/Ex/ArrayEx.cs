@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JuhaKurisu.Jlib
+namespace JuhaKurisu.Jlib.Ex
 {
-    public static partial class Jlib
+    public static partial class JEx
     {
         public static bool TryGetValue<T>(this T[] array, int index, out T value)
         {

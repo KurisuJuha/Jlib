@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JuhaKurisu.Jlib
+namespace JuhaKurisu.Jlib.Ex
 {
-    public static partial class Jlib
+    public static partial class JEx
     {
         /// <summary>
         /// 指定したキーの値が存在していたらその値を返し、存在していなかったらDefault値を返す

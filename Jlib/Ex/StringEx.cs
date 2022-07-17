@@ -1,7 +1,7 @@
 ﻿
-namespace JuhaKurisu.Jlib
+namespace JuhaKurisu.Jlib.Ex
 {
-    public static partial class Jlib
+    public static partial class JEx
     {
         /// <summary>
         /// 与えられた位置に文字があった場合はtrueを返し、文字がなかった場合はfalseを返す
