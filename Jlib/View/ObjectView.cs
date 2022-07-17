@@ -3,37 +3,29 @@ namespace JuhaKurisu.Jlib.View
 {
     public static partial class JView
     {
-        public static string View(this Object obj, string name = "")
+        private static string View<T>(string name)
         {
             string s = "";
             if (name != "")
             {
-                s = name + " : ";
+                s = name + "(" + typeof(T).Name + ")" + " : ";
             }
+            return s;
+        }
 
-            return s + obj.ToString();
+        public static string View(this Object obj, string name = "")
+        {
+            return View<object>(name) + obj.ToString();
         }
 
         public static string View(this string str, string name = "")
         {
-            string s = "";
-            if (name != "")
-            {
-                s = name + " : ";
-            }
-
-            return s + "\"" + str + "\"";
+            return View<string>(name) + "\"" + str + "\"";
         }
 
         public static string View(this char c , string name = "")
         {
-            string s = "";
-            if (name != "")
-            {
-                s = name + " : ";
-            }
-
-            return s + "\'" + c.ToString() + "\'";
+            return View<char>(name) + "\'" + c.ToString() + "\'";
         }
     }
 }
