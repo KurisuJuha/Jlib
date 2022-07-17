@@ -21,14 +21,21 @@ public partial class Test
     [Fact]
     public void View_StringView()
     {
+        Assert.Equal("\"bb\"", "bb".View());
         Assert.Equal("aa(String) : \"bb\"", "bb".View("aa"));
     }
 
     [Fact]
     public void View_CharView()
     {
+        Assert.Equal("\'b\'", 'b'.View());
         Assert.Equal("a(Char) : \'b\'", 'b'.View("a"));
     }
 
-
+    [Fact]
+    public void View_IntView()
+    {
+        Assert.Equal("256", 256.View());
+        Assert.Equal("a(Int32) : 256", 256.View("a"));
+    }
 }

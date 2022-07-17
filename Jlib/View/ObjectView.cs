@@ -27,6 +27,11 @@ namespace JuhaKurisu.Jlib.View
         {
             return View<char>(name) + "\'" + c.ToString() + "\'";
         }
+
+        public static string View(this int i, string name = "")
+        {
+            return View<int>(name) + i;
+        }
     }
 }
 
