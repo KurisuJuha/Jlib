@@ -1,0 +1,12 @@
+{
+    "name": "jp.juhakurisu.jlib",
+    "version": "0.0.0",
+    "displayName": "Jlib",
+    "description": "JuhaKurisuのユーティリティライブラリです。",
+    "unity": "2021.3",
+    "unityRelease": "1f1",
+  
+    "author": {
+      "name": "JuhaKurisu"
+    }
+}
